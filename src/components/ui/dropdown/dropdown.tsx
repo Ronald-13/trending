@@ -2,14 +2,19 @@ import './dropdown.css';
 import { Dropdown, FormControl } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 
+/**
+ * Dropdown component - Contains search and emits selected dropdown on handleLanguage
+ * 
+ */
+
 const DropdownFilter = (props: any) => {
-  const fullList = [{ name: 'C++', value: 'C++', id: 1 }, { name: 'JavaScript', value: 'JavaScript', id: 2 }];
   const [value, setValue] = useState('');
   const [search, setSearch] = useState('');
   const [list, setList] = useState<any[]>([]);
+  const { options } = props;
 
   useEffect(() => {
-    setList(fullList);
+    setList(options);
     setValue("Any");
   }, []);
 
@@ -20,7 +25,7 @@ const DropdownFilter = (props: any) => {
 
   const handleSearch = (str: string) => {
     setSearch(str);
-    const newArr = fullList.filter(el => el.name.toLowerCase().indexOf(str.toLowerCase()) !== -1);
+    const newArr = options.filter((el: any) => el.name.toLowerCase().indexOf(str.toLowerCase()) !== -1);
     setList(newArr);
   }
 

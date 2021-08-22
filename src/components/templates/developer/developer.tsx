@@ -2,6 +2,11 @@ import { memo } from 'react';
 import { BookIcon, HeartIcon, PopularIcon } from '../../../constants/icons';
 import './developer.css';
 
+/**
+ * Developer template component - Each developer block for developers
+ * 
+ */
+
 function Developer(props: any) {
   const { name, avatar, url, username, rank, popularRepository} = props.data;
   return (

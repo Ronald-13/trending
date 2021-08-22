@@ -1,6 +1,11 @@
 import './tab.css';
 import { memo } from 'react';
 
+/**
+ * Tab component - Routes between Repositories and Developers
+ * 
+ */
+
 function Tab({ active }: any) {
     return (
       <>

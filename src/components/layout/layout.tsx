@@ -1,6 +1,11 @@
 import { memo } from 'react';
 import './layout.css';
 
+/**
+ * Layout component - Contain the headers and basic structure of the design
+ * 
+ */
+
 function Layout(props: any) {
     return (
       <>

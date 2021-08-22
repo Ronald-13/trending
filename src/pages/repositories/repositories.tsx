@@ -3,6 +3,7 @@ import Tab from '../../components/ui/tab/tab';
 import Article from '../../components/templates/article/article';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { LANGUAGES } from '../../constants/dropdowns';
 
 export const Repositories = () => {
     const [trendingList, setTrendingList] = useState([]);
@@ -32,7 +33,7 @@ export const Repositories = () => {
             <div className="block">
                 <div className="block-header">
                     <Tab active="repositories" />
-                    <div className="dropdown"><DropdownFilter handleLanguage={handleLanguage}/></div>
+                    <div className="dropdown"><DropdownFilter options={LANGUAGES} handleLanguage={handleLanguage}/></div>
                 </div>
                 <div className="block-list">
                 {trendingListShown.map((el: any) => (

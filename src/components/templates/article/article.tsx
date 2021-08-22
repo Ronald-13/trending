@@ -2,6 +2,11 @@ import { memo } from 'react';
 import { BookIcon, ForkIcon, StarIcon } from '../../../constants/icons';
 import './article.css';
 
+/**
+ * Article template component - Each article block for repositories
+ * 
+ */
+
 function Article(props: any) {
   const { repositoryName, username, url, description, language, totalStars, forks, builtBy, starsSince } = props.data;
   return (
