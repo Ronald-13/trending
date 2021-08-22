@@ -1,0 +1,55 @@
+:root{
+  --primary-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  --secondary-font-family: 'Lato', sans-serif;
+  --color-black: #333A3A;
+  --color-background-btn: #1f6feb;
+  --color-background-border-btn: #388bfd;
+  --color-primary-text: #f0f6fc;
+  --color-border-primary: #30363d;
+  --color-text-primary: #c9d1d9;
+  --color-text-secondary: #8b949e;
+  --color-bg-primary: #0d1117;
+  --color-bg-tertiary: #161b22;
+  --color-link: #58a6ff;
+  --color-btn-bg: #21262d;
+  --color-fire: #bd561d;
+  --color-pink: #bf4b8a;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font-family);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.h1, .h3, .h4 {
+  font-weight: 600 !important;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--color-border-primary) !important;
+}
+
+.border-top {
+  border-top: 1px solid var(--color-border-primary) !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 768px){
+  .h1 {
+      font-size: 32px !important;
+  }
+  .h3 {
+    font-size: 20px !important;
+  }
+}

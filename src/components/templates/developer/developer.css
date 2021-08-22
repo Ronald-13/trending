@@ -1,0 +1,123 @@
+.developer {
+   padding: 20px 10px; 
+}
+
+.developer .avatar-user {
+   border-radius: 50%;
+   display: inline-block;
+   width: 48px;
+   height: 48px;
+   margin-left: 3px;
+   flex-shrink: 0;
+   line-height: 1;
+   overflow: hidden;
+   vertical-align: middle;
+}
+
+.flex-auto {
+   flex: auto!important;
+}
+
+.developer .block-1 a {
+   color: var(--color-link);
+   text-decoration: none;
+}
+
+.developer .block-1 a:hover {
+   text-decoration: underline;
+}
+
+.developer .block-1 .para{
+   font-weight: 400;
+   font-size: 16px;
+   margin-bottom: 4px;
+   color: var(--color-text-secondary);
+   cursor: pointer;
+}
+
+.developer .block-1 .para:hover{
+   text-decoration: underline;
+   color: var(--color-link);
+}
+
+.developer .rank{
+   color: var(--color-text-secondary);
+   width: 16px;
+   text-align: center;
+   cursor: pointer;
+   text-decoration: none;
+   font-size: 12px;
+}
+
+.developer .rank:hover{
+   text-decoration: underline;
+}
+
+.developer .block-2 .first {
+   color: var(--color-text-secondary);
+   text-transform: uppercase;
+   font-size: 12px;
+   margin-bottom: 4px;
+}
+
+.developer .block-2 .popular-icon {
+   color: var(--color-fire);
+   vertical-align: text-bottom;
+}
+
+.developer .block-2 .book-icon {
+   color: var(--color-text-secondary);
+   margin-right: 5px;
+   vertical-align: text-bottom;
+}
+
+.developer .block-2 .second a {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   display: inline-block;
+   max-width: 125px;
+   vertical-align: top;
+   font-size: 16px;
+   text-decoration: none;
+   color: var(--color-link);
+}
+
+.developer .block-2 .second a:hover {
+   text-decoration: underline;
+}
+
+.developer .block-2 p {
+   font-size: 12px;
+   color: var(--color-text-secondary);
+}
+
+.developer .follow, .developer .sponsor{
+   display: flex;
+   align-items: center;
+   float: right;
+   font-size: 12px;
+   line-height: 20px;
+   padding: 3px 12px;
+   background-color: var(--color-btn-bg);
+   transition: .2s cubic-bezier(.3,0,.5,1);
+   color: var(--color-text-primary);
+   border: 1px solid var(--color-border-primary);
+   border-radius: 6px;
+   cursor: pointer;
+   height: 30px;
+   font-weight: 500;
+}
+
+.developer .sponsor{ 
+   margin-right: 10px;
+}
+.developer .heart-icon{
+   color: var(--color-pink);
+   margin-right: 5px;
+   vertical-align: text-bottom;
+}
+
+.flex-justify-end {
+   justify-content: flex-end;
+}
