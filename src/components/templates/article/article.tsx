@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { BookIcon, ForkIcon, StarIcon } from '../../../constants/icons';
 import './article.css';
 
-function article(props: any) {
+function Article(props: any) {
   const { repositoryName, username, url, description, language, totalStars, forks, builtBy, starsSince } = props.data;
   return (
     <div className="article border-top" key={props.rank}>
@@ -15,8 +15,8 @@ function article(props: any) {
         <span className="span total-stars"><StarIcon className="star-icon" />{totalStars}</span>
         <span className="span total-forks"><ForkIcon className="fork-icon" />{forks}</span>
         <span>Built by
-          {builtBy.map((el: any) =>
-            <img className="avatar-user" src={el.avatar} />
+          {builtBy.map((el: any, index: number) =>
+            <img className="avatar-user" src={el.avatar} key={`img${index}`}/>
           )}
         </span>
         <span className="stars-today"><StarIcon className="star-icon" /> {starsSince} stars today</span>
@@ -25,4 +25,4 @@ function article(props: any) {
   );
 }
 
-export default memo(article);
+export default memo(Article);

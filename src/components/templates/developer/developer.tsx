@@ -2,7 +2,7 @@ import { memo } from 'react';
 import { BookIcon, HeartIcon, PopularIcon } from '../../../constants/icons';
 import './developer.css';
 
-function developer(props: any) {
+function Developer(props: any) {
   const { name, avatar, url, username, rank, popularRepository} = props.data;
   return (
     <div className="developer border-top d-flex" key={props.rank}>
@@ -33,4 +33,4 @@ function developer(props: any) {
   );
 }
 
-export default memo(developer);
+export default memo(Developer);

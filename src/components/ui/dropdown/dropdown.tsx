@@ -1,29 +1,48 @@
 import './dropdown.css';
 import { Dropdown, FormControl } from 'react-bootstrap';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function dropdown() {
-  // const [value, setValue] = useState('');
+const DropdownFilter = (props: any) => {
+  const fullList = [{ name: 'C++', value: 'C++', id: 1 }, { name: 'JavaScript', value: 'JavaScript', id: 2 }];
+  const [value, setValue] = useState('');
+  const [search, setSearch] = useState('');
+  const [list, setList] = useState<any[]>([]);
+
+  useEffect(() => {
+    setList(fullList);
+    setValue("Any");
+  }, []);
+
+  const handleSelect = (key: string) => {
+    setValue(key);
+    props.handleLanguage(key);
+  }
+
+  const handleSearch = (str: string) => {
+    setSearch(str);
+    const newArr = fullList.filter(el => el.name.toLowerCase().indexOf(str.toLowerCase()) !== -1);
+    setList(newArr);
+  }
+
   return (
-    <Dropdown>
+    <Dropdown onSelect={(eventKey: any) => handleSelect(eventKey)}>
       <Dropdown.Toggle variant="success" id="dropdown-basic">
-        Dropdown Button
+        Language: {value}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
         <FormControl
           autoFocus
           className="mx-3 my-2 w-auto"
-          placeholder="Type to filter..."
-          onChange={(e) => console.log(e.target.value)}
-          value={''}
+          placeholder=""
+          onChange={(e) => handleSearch(e.target.value)}
+          value={search}
         />
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item eventKey="Any">Any</Dropdown.Item>
+        {list.map((el: any) => <Dropdown.Item key={el.id} eventKey={el.value}>{el.name}</Dropdown.Item>)}
       </Dropdown.Menu>
     </Dropdown>
-    );
-  }
+  );
+}
 
-export default dropdown;
+export default DropdownFilter;

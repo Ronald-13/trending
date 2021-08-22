@@ -1,7 +1,7 @@
 import './tab.css';
 import { memo } from 'react';
 
-function tab({ active }: any) {
+function Tab({ active }: any) {
     return (
       <>
         <nav className="subnav" aria-label="trending">
@@ -12,4 +12,4 @@ function tab({ active }: any) {
     );
   }
 
-export default memo(tab);
+export default memo(Tab);

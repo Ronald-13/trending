@@ -1,4 +1,3 @@
-import Dropdown from '../../components/ui/dropdown/dropdown';
 import Tab from '../../components/ui/tab/tab';
 import Developer from '../../components/templates/developer/developer';
 import { useState, useEffect } from 'react';
@@ -20,7 +19,6 @@ export const Developers = () => {
             <div className="block">
                 <div className="block-header">
                     <Tab active="developers" />
-                    {/* <Dropdown /> */}
                 </div>
                 <div className="block-list">
                 {trendingList.map((el: any) => (

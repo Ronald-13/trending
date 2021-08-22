@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import './layout.css';
 
-function layout(props: any) {
+function Layout(props: any) {
     return (
       <>
         <div className="container-a border-bottom">
@@ -19,4 +19,4 @@ function layout(props: any) {
     );
   }
 
-export default memo(layout);
+export default memo(Layout);
